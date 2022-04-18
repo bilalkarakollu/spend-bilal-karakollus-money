@@ -1,9 +1,9 @@
-import { Button } from 'antd';
+import Navbar from './container/Navbar';
 
 function App() {
   return (
     <div className="App">
-      Hello World
+      <Navbar/>
     </div>
   );
 }
