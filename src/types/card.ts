@@ -12,6 +12,7 @@ export interface CardState {
     card: ProductType[];
     totalMoney: number;
     total:number;
+    totalPrice:number;
 }
 
 interface ADD_PRODUCT {

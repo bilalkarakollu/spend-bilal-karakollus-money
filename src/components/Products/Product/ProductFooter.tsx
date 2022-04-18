@@ -21,13 +21,13 @@ const ProductFooter: FunctionComponent<IProductProps> = (props) => {
   const addBuy = () => {
       //dispatch(addProduct(product))
   }
-
+/*
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     let value = parseInt(e.target.value);
     if(value > -1){
       setInput(Number(value));
     }
-  };
+  };*/
 
   const handleClickBuy = () => {
     setIsSell(false)
@@ -59,7 +59,6 @@ const ProductFooter: FunctionComponent<IProductProps> = (props) => {
         sx={{ mx: 2, p: 0 }}
         size="small"
         value={input}
-        onChange={handleChange}
       />
       <Button onClick={handleClickBuy} variant="contained" sx={{ px: 5 }}>
         Buy

@@ -3,7 +3,8 @@ import { CardState, CardAction } from "./../../types/card";
 const defaultState: CardState = {
     card:[],
     totalMoney:100000000000,
-    total:0
+    total:0,
+    totalPrice:0
 };
 
 const cardReducer = (state: CardState = defaultState, action: CardAction) => {
@@ -15,6 +16,7 @@ const cardReducer = (state: CardState = defaultState, action: CardAction) => {
           ...state,
           card: state.card.map(item => item.id === action.payload.id ? {...item, count: item.count + 1} : item),
           total: state.total + 1,
+          totalPrice: state.totalPrice + action.payload.money,
           totalMoney: state.totalMoney - action.payload.money
         };
       }else{
@@ -22,6 +24,7 @@ const cardReducer = (state: CardState = defaultState, action: CardAction) => {
           ...state,
           card: [...state.card, {...action.payload, count: 1}],
           total: state.total + 1,
+          totalPrice: state.totalPrice + action.payload.money,
           totalMoney: state.totalMoney - action.payload.money
         };
       }
@@ -32,6 +35,7 @@ const cardReducer = (state: CardState = defaultState, action: CardAction) => {
           ...state,
           card: state.card.map(item => item.id === action.payload ? {...item, count: item.count - 1} : item),
           total: state.total - 1,
+          totalPrice: state.totalPrice - isProduct.money,
           totalMoney: state.totalMoney + isProduct.money
         }
       }else{
@@ -40,6 +44,8 @@ const cardReducer = (state: CardState = defaultState, action: CardAction) => {
           card: state.card.filter(item => item.id !== action.payload),
           total: state.total - 1,
           // @ts-ignore
+          totalPrice: state.totalPrice - isProduct.money,
+           // @ts-ignore
           totalMoney: state.totalMoney + isProduct.money
         }
       }
