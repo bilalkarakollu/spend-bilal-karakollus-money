@@ -1,6 +1,7 @@
 import { Box, Typography, Avatar } from "@mui/material";
 import { AppState } from '../store'
 import { useSelector } from "react-redux";
+import { MoneyFormat } from "../utils/MoneyFormat";
 
 const Header = () => {
 
@@ -29,7 +30,7 @@ const Header = () => {
         </Box>
       </Box>
       <Box py={2} sx={{backgroundColor:'yellowgreen'}}>
-            <Typography textAlign={'center'} fontSize={32} variant={'h2'} fontWeight={700} color={'white'}>${totalMoney}</Typography>
+            <Typography textAlign={'center'} fontSize={32} variant={'h2'} fontWeight={700} color={'white'}>${MoneyFormat(totalMoney)}</Typography>
       </Box>
     </>
   );

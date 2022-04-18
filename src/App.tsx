@@ -1,6 +1,7 @@
 import Header from "./container/Header";
 import Navbar from "./container/Navbar";
 import { Container } from "@mui/material";
+import Products from "./components/Products";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Container maxWidth="lg">
         <Header />
+        <Products/>
       </Container>
     </div>
   );

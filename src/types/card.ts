@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductType {
     id:number;
     money: number;
     name: string;
@@ -6,14 +6,14 @@ export interface Product {
 }
 
 export interface CardState {
-    card: Product[];
+    card: ProductType[];
     totalMoney: number;
     total:number;
 }
 
 interface ADD_PRODUCT {
     type: "ADD_PRODUCT";
-    action: Product;
+    action: ProductType;
 }
 
 interface DELETE_PRODUCT {
