@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import 'antd/dist/antd.css'; 
 
 import App from './App';
 import rootReducer from './store';
