@@ -2,7 +2,7 @@ import { CardState } from './../types/card';
 import { combineReducers } from "redux";
 import cardReducer from "./reducers/cardReducer";
 
-interface AppState {
+export interface AppState {
     card: CardState
 }
 

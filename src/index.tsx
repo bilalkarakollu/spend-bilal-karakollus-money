@@ -3,9 +3,10 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
 import { CssBaseline } from '@mui/material';
-import App from './App';
-import rootReducer from './store';
 import { Provider } from 'react-redux';
+import rootReducer from './store';
+import App from './App';
+import './index.css';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
