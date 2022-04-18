@@ -3,10 +3,10 @@ import { Grid } from '@mui/material';
 import { data } from "../../api/data";
 
 const Products = () => {
-    console.log(data)
+
   return (
     <Grid container spacing={2} mt={0.1}>
-        {data.map(product => <Product product={product}/>)}
+        {data.map(product => <Product key={product.id} product={product}/>)}
     </Grid>
   )
 }
